@@ -2,6 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// This class handles player tank model.
+/// </summary>
 namespace Outscal.BattleTank3D
 {
     public class TankModel
@@ -39,7 +42,6 @@ namespace Outscal.BattleTank3D
             bulletType = null;
             tankController = null;
         }
-
     }
 }
 

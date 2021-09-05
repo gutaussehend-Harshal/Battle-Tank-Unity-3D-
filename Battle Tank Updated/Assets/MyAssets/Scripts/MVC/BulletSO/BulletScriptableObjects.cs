@@ -2,15 +2,16 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// This class handles bullet scriptable objects.
+/// </summary>
 namespace Outscal.BattleTank3D
 {
     [CreateAssetMenu(fileName = "BulletScriptableObjects", menuName = "ScriptableObject/NewBullet")]
     public class BulletScriptableObjects : ScriptableObject
     {
-        [Header("MVC Essentials")]
         public BulletView bulletView;
 
-        [Header("Behaviour Variables")]
         public BulletTypes bulletTypes;
         public float bulletForce;
         public float bulletDamage;

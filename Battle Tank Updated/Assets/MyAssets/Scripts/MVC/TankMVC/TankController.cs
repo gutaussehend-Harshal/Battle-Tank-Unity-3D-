@@ -2,6 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// This class handles player tank controller.
+/// </summary>
 namespace Outscal.BattleTank3D
 {
     public class TankController
@@ -10,6 +13,7 @@ namespace Outscal.BattleTank3D
         public TankView tankView { get; private set; }
         private Rigidbody rb;
         
+        // private UIManager uiManager;
         public TankController(TankModel _tankModel, TankView _tankView)
         {
             PlayerPrefs.DeleteAll();
@@ -82,10 +86,10 @@ namespace Outscal.BattleTank3D
             tankModel.health -= damage;
             // UIService.instance.UpdateHealthText(tankModel.health);
             Debug.Log("Player Health : " + tankModel.health);
-
             if (tankModel.health <= 0)
             {
                 Dead();
+                UIManager.uiManagerInstance.DisplayLoseGamePanel();
             }
         }
 

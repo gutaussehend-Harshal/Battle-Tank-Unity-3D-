@@ -1,10 +1,11 @@
 ﻿using System;
 using UnityEngine;
 
-
+/// <summary>
+/// Bullets Fired Achievement ScriptableObject class
+/// </summary>
 namespace Outscal.BattleTank3D
 {
-
     [CreateAssetMenu(menuName = "BulletFireAchievenetSO", fileName = "ScriptableObject/NewfireBulletSO")]
     public class BulletsFiredAchievementSO : ScriptableObject
     {

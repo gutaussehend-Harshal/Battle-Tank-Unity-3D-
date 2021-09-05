@@ -2,6 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// This class handles player tank view.
+/// </summary>
 namespace Outscal.BattleTank3D
 {
     public class TankView : MonoBehaviour
@@ -64,7 +67,6 @@ namespace Outscal.BattleTank3D
         // {
         //     tankController.ApplyDamage(damage);
         // }
-
     }
 }
 

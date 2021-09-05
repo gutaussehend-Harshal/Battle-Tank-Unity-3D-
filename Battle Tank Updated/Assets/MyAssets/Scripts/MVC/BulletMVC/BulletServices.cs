@@ -2,6 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// This class handles bullet service.
+/// </summary>
 namespace Outscal.BattleTank3D
 {
     public class BulletServices : MonoSingletonGeneric<BulletServices>

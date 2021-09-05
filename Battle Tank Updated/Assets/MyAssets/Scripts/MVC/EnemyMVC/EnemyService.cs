@@ -2,6 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// This class handles enemy tank service.
+/// </summary>
 namespace Outscal.BattleTank3D
 {
     public class EnemyService : MonoSingletonGeneric<EnemyService>
@@ -33,6 +36,10 @@ namespace Outscal.BattleTank3D
             // Debug.Log(TankService.instance.GetCurrentTankModel().EnemiesKilled);
             // UIService.instance.UpdateScoreText();
             AchievementServices.GetInstance().GetAchievementController().CheckForEnemyKilledAchievement();
+            if (TankService.GetInstance().GetCurrentTankModel().enemyKilled == 5)
+            {
+                UIManager.uiManagerInstance.DisplayWinGamePanel();
+            }
         }
 
         public EnemyController GetEnemyTankController()
@@ -71,7 +78,6 @@ namespace Outscal.BattleTank3D
         {
             EventService.GetInstance().OnEnemyKilled -= UpdateEnemiesKilledCount;
         }
-
 
         public void DestroyEnemyTank(EnemyController enemyController)
         {

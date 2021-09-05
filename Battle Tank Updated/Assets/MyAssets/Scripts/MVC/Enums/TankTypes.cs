@@ -1,7 +1,6 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
+﻿/// <summary>
+/// This class handles player tank types.
+/// </summary>
 namespace Outscal.BattleTank3D
 {
     public enum TankType

@@ -2,6 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// This class handles achievement controller.
+/// </summary>
 namespace Outscal.BattleTank3D
 {
     public class AchievementController
@@ -36,7 +39,6 @@ namespace Outscal.BattleTank3D
             }
         }
 
-
         public void CheckForEnemyKilledAchievement()
         {
             for (int i = 0; i < achivementModel.enemyKilledAchievementSO.steps.Length; i++)
@@ -52,10 +54,14 @@ namespace Outscal.BattleTank3D
                     currentStageOfEnemyKilledAchievement = i + 1;
                     // PlayerPrefs.SetInt("BulletFireAchievement", currentStageOfBulletFiredAchievement);
                 }
+                // if(i == achivementModel.enemyKilledAchievementSO.steps.Length)
+                // {
+                //     UIManager.uiManagerInstance.DisplayLoseGamePanel();
+                // }
                 break;
             }
         }
-        
+
         void UnlockedAchievement(string achievement)
         {
             Debug.Log("Got :" + achievement);

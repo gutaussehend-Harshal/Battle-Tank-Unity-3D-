@@ -2,6 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// MonoSingletonGeneric class
+/// </summary>
 namespace Outscal.BattleTank3D
 {
     public class MonoSingletonGeneric<T> : MonoBehaviour where T : MonoBehaviour

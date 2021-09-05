@@ -1,5 +1,8 @@
 ﻿using System;
 
+/// <summary>
+/// This class handles event service.
+/// </summary>
 namespace Outscal.BattleTank3D
 {
     public class EventService : MonoSingletonGeneric<EventService>

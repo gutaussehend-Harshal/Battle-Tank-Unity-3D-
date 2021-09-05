@@ -2,7 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-
+/// <summary>
+/// This class handles player tank service.
+/// </summary>
 namespace Outscal.BattleTank3D
 {
     public class TankService : MonoSingletonGeneric<TankService>
@@ -68,6 +70,7 @@ namespace Outscal.BattleTank3D
                     tanks.Remove(tank);
                 }
             }
+            UIManager.uiManagerInstance.DisplayLoseGamePanel();
             // DestroyGround.instance.DestroyMilitary();
         }
 
@@ -83,6 +86,7 @@ namespace Outscal.BattleTank3D
                     enemyControllers[i].DeadEnemy();
                 }
             }
+            UIManager.uiManagerInstance.DisplayWinGamePanel();
         }
     }
 }

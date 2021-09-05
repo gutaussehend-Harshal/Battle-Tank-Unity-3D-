@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
+/// <summary>
+/// This class handles enemy tank view.
+/// </summary>
 namespace Outscal.BattleTank3D
 {
     public class EnemyView : MonoBehaviour
@@ -21,7 +24,7 @@ namespace Outscal.BattleTank3D
 
         public EnemyPatrollingState patrollingState;
         public EnemyChasingState chasingState;
-        public EnemyAttackingState attackingState;
+        // public EnemyAttackingState attackingState;
 
         public EnemyStatesEnum initialState;
         public EnemyStatesEnum activeState;
@@ -72,9 +75,9 @@ namespace Outscal.BattleTank3D
             switch (initialState)
             {
 
-                case EnemyStatesEnum.Attacking:
-                    currentState = attackingState;
-                    break;
+                // case EnemyStatesEnum.Attacking:
+                //     currentState = attackingState;
+                //     break;
 
                 case EnemyStatesEnum.Chasing:
                     currentState = chasingState;

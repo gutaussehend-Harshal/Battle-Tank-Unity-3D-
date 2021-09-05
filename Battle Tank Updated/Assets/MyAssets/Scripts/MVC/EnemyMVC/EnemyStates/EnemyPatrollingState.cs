@@ -2,6 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// This class handles enemy tank patrolling state.
+/// </summary>
 namespace Outscal.BattleTank3D
 {
     public class EnemyPatrollingState : EnemyState

@@ -2,6 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// This class handles enemy tank controller.
+/// </summary>
 namespace Outscal.BattleTank3D
 {
     public class EnemyController
@@ -15,7 +18,6 @@ namespace Outscal.BattleTank3D
             enemyView = GameObject.Instantiate<EnemyView>(_enemyView, pos, Quaternion.identity);
             enemyView.SetEnemyTankController(this);
             enemyModel.SetEnemyTankController(this);
-
         }
 
         public Vector3 GetRandomPosition()

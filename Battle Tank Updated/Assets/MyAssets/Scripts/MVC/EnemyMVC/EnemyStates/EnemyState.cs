@@ -2,6 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// This class handles enemy tank states.
+/// </summary>
 namespace Outscal.BattleTank3D
 {
     public class EnemyState : MonoBehaviour

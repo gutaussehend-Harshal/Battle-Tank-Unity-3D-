@@ -2,6 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// This class handles enemy tank model.
+/// </summary>
 namespace Outscal.BattleTank3D
 {
     public class EnemyModel
@@ -28,7 +31,6 @@ namespace Outscal.BattleTank3D
 
         public void DestroyModel()
         {
-
             Debug.Log("Destroy Enemy model called");
             bulletType = null;
             enemyController = null;

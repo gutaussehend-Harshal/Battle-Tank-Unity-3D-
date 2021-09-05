@@ -2,28 +2,25 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// Tank ScriptableObject class
+/// </summary>
 namespace Outscal.BattleTank3D
 {
     [CreateAssetMenu(fileName = "TankScriptableObjects", menuName = "ScriptableObject/NewTank")]
     public class TankScriptableObjects : ScriptableObject
     {
-        [Header("Tank Type Specific")]
         public TankType tankType;
 
-        [Header("MVC Essentials")]
         public TankView tankView;
 
-        [Header("Tank Movement Variables")]
         public float movementSpeed;
         public float rotationSpeed;
 
-        [Header("Tank Health Variables")]
         public float health;
 
-        [Header("Tank Shooting Variables")]
         public float fireRate;
         public BulletScriptableObjects bulletType;
-
     }
 
     [CreateAssetMenu(fileName = "TankSO_List", menuName = "ScriptableObjectList/TankListOfSO")]
@@ -31,5 +28,4 @@ namespace Outscal.BattleTank3D
     {
         public TankScriptableObjects[] tanks;
     }
-
 }

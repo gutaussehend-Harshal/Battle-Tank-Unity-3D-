@@ -2,6 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// Destroy everything after player died.
+/// </summary>
 namespace Outscal.BattleTank3D
 {
     public class DestroyGround : MonoBehaviour
@@ -55,9 +58,7 @@ namespace Outscal.BattleTank3D
                 Destroy(rocks[i].gameObject);
                 Debug.Log("Called");
                 rocks[i] = null;
-
             }
-
             DestroyCompleteLevelArt();
         }
 

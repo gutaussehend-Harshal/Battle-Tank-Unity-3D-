@@ -2,22 +2,21 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// This class handles enemy tank ScriptableObject.
+/// </summary>
 namespace Outscal.BattleTank3D
 {
     [CreateAssetMenu(fileName = "EnemyTankScriptableObjects", menuName = "EnemyScriptableObject/NewEnemy")]
     public class EnemyTankScriptableObject : ScriptableObject
     {
-        [Header("MVC")]
         public EnemyView enemyView;
         public BoxCollider groundArea;
 
-        [Header("Enemy Shooting")]
         public float fireRate;
         public BulletScriptableObjects bulletType;
 
-        [Header("Enemy Health")]
         public float enemyHealth;
-
     }
 
     [CreateAssetMenu(fileName = "EnemyTankSO_List", menuName = "EnemyScriptableObjectList/EnemyTankListOfSO")]

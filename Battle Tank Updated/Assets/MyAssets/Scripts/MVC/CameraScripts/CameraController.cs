@@ -2,6 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// This class handles camera controller.
+/// </summary>
 namespace Outscal.BattleTank3D
 {
     public class CameraController : MonoBehaviour

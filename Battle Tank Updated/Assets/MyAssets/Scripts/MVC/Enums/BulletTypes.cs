@@ -1,4 +1,7 @@
-﻿namespace Outscal.BattleTank3D
+﻿/// <summary>
+/// This class handles bullet types.
+/// </summary>
+namespace Outscal.BattleTank3D
 {
     public enum BulletTypes
     {

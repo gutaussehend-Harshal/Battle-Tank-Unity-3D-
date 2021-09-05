@@ -2,6 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// This class handles bullet view.
+/// </summary>
 namespace Outscal.BattleTank3D
 {
     public class BulletView : MonoBehaviour

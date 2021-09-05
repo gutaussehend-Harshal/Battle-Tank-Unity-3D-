@@ -202,8 +202,6 @@ GameObject:
   - component: {fileID: 1743523419696167050}
   - component: {fileID: 1743523419696653653}
   - component: {fileID: 1743523419696653673}
-  - component: {fileID: 1743523419696653654}
-  - component: {fileID: 2667248750266429965}
   m_Layer: 0
   m_Name: pfGreenPlayer
   m_TagString: Player
@@ -257,37 +255,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 80
   m_CollisionDetection: 1
---- !u!114 &1743523419696653654
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1743523419696653674}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 752fcbe36b5dbc64aa0121453f816ac4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rotateSpeed: 200
-  movementSpeed: 30
---- !u!114 &2667248750266429965
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1743523419696653674}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b99c744964aa6db499e878dc6c8f47af, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  firepoint: {fileID: 2243845753653274341}
-  bulletPrefab: {fileID: 7977844775439780506, guid: e7bafce44115c354783172bb455d8579,
-    type: 3}
-  m_ExplosionParticles: {fileID: 4955708510085576923}
-  bulletForce: 20
 --- !u!1 &1743523419696653676
 GameObject:
   m_ObjectHideFlags: 0
