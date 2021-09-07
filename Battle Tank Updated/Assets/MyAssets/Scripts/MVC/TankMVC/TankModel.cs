@@ -27,9 +27,9 @@ namespace Outscal.BattleTank3D
             health = tankSO.health;
             fireRate = tankSO.fireRate;
             bulletType = tankSO.bulletType;
-            // bulletFired = PlayerPrefs.GetInt("BulletsFired");
             bulletFired = 0;
             enemyKilled = 0;
+            // bulletFired = PlayerPrefs.GetInt("BulletsFired");
         }
 
         public void SetTankController(TankController _tankController)

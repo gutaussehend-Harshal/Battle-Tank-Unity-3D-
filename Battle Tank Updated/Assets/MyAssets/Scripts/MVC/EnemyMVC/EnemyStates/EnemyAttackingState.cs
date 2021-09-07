@@ -2,18 +2,15 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-/// <summary>
-/// This class handles enemy tank patrolling state.
-/// </summary>
 namespace Outscal.BattleTank3D
 {
-    public class EnemyPatrollingState : EnemyState
+    public class EnemyAttackingState : EnemyState
     {
         public override void OnStateEnter()
         {
             base.OnStateEnter();
-            enemyView.activeState = EnemyStatesEnum.Patrolling;
-            enemyView.enemyController.Patrol();
+            enemyView.activeState = EnemyStatesEnum.Attacking;
+            enemyView.enemyController.ShootBullet();
         }
 
         public override void OnStateExit()

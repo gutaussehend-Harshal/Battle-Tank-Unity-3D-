@@ -14,7 +14,7 @@ namespace Outscal.BattleTank3D
         {
             OnPlayerFiredBullet?.Invoke();
         }
-        public void InvokeEnemyKilledEvent()
+        public void InvokeOnEnemyKilledEvent()
         {
             OnEnemyKilled?.Invoke();
         }

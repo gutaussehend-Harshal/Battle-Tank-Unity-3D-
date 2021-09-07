@@ -11,13 +11,13 @@ namespace Outscal.BattleTank3D
     {
         private EnemyController enemyController;
         public float enemyHealth { get; set; }
-        public float fireRate { get; private set; }
+        public float fireRate { get; set; }
         public BulletScriptableObjects bulletType { get; private set; }
-        public BoxCollider groundArea;
+        [SerializeField] private BoxCollider groundArea;
 
         public EnemyModel(EnemyTankScriptableObject enemySO)
         {
-            Debug.Log("Enemy model created");
+            // Debug.Log("Enemy model created");
             enemyHealth = enemySO.enemyHealth;
             groundArea = enemySO.groundArea;
             fireRate = enemySO.fireRate;
@@ -28,10 +28,15 @@ namespace Outscal.BattleTank3D
         {
             enemyController = _enemyController;
         }
+        
+        // public void SetEnemyTankController(EnemyController _enemyController)
+        // {
+        //     enemyController = _enemyController;
+        // }
 
         public void DestroyModel()
         {
-            Debug.Log("Destroy Enemy model called");
+            // Debug.Log("Destroy Enemy model called");
             bulletType = null;
             enemyController = null;
         }

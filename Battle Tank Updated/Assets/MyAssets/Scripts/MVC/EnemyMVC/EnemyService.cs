@@ -34,7 +34,7 @@ namespace Outscal.BattleTank3D
             TankService.GetInstance().GetCurrentTankModel().enemyKilled += 1;
             // PlayerPrefs.SetInt("EnemiesKilled", TankService.instance.GetCurrentTankModel().EnemiesKilled);
             // Debug.Log(TankService.instance.GetCurrentTankModel().EnemiesKilled);
-            // UIService.instance.UpdateScoreText();
+            UIManager.uiManagerInstance.UpdateScoreText();
             AchievementServices.GetInstance().GetAchievementController().CheckForEnemyKilledAchievement();
             if (TankService.GetInstance().GetCurrentTankModel().enemyKilled == 5)
             {

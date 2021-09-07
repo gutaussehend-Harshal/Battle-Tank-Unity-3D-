@@ -11,8 +11,9 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 0}
   m_Name: BulletSO_List
-  m_EditorClassIdentifier: Assembly-CSharp:BattleTank:BulletSO_List
+  m_EditorClassIdentifier: Assembly-CSharp:Outscal.BattleTank3D:BulletSO_List
   bullets:
-  - {fileID: 11400000, guid: e7a7568951cda754dab68be2573ed6ff, type: 2}
-  - {fileID: 11400000, guid: d68be213663080143b505957470a2c29, type: 2}
-  - {fileID: 11400000, guid: 4c73eb59c9514874dbddc947584a9391, type: 2}
+  - {fileID: 11400000, guid: c6f456cae084fae4abbe7c274135cb75, type: 2}
+  - {fileID: 11400000, guid: 89ef2db7cce19f543bb7c0194a2e2fc8, type: 2}
+  - {fileID: 11400000, guid: 74f82c2b0ac0f64479a389b679be6fc1, type: 2}
+  - {fileID: 11400000, guid: 52dd8fdc631d6e34b9edc86ff5e50108, type: 2}

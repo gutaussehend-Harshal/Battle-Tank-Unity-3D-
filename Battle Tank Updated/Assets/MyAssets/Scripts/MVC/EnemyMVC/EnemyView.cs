@@ -10,21 +10,21 @@ namespace Outscal.BattleTank3D
 {
     public class EnemyView : MonoBehaviour
     {
-        public ParticleSystem TankDestroyVFX;
+        [SerializeField] private ParticleSystem TankDestroyVFX;
         public NavMeshAgent enemyNavMesh;
         public EnemyController enemyController;
-        private BoxCollider ground;
+        [SerializeField] private BoxCollider ground;
         public float maxX, maxZ, minX, minZ;
         public float timer, patrolTime;
         public float howClose;
         public float canFire = 0f;
         public Transform BulletShootPoint;
         public Transform playerTransform;
-        public MeshRenderer[] childs;
+        [SerializeField] private MeshRenderer[] childs;
 
         public EnemyPatrollingState patrollingState;
         public EnemyChasingState chasingState;
-        // public EnemyAttackingState attackingState;
+        public EnemyAttackingState attackingState;
 
         public EnemyStatesEnum initialState;
         public EnemyStatesEnum activeState;
@@ -58,7 +58,7 @@ namespace Outscal.BattleTank3D
 
         private void SetGroundForEnemyPatrolling()
         {
-            ground = GroundBoxCollider.groundboxCollider; ;
+            ground = GroundBoxCollider.groundboxCollider;
             maxX = ground.bounds.max.x;
             maxZ = ground.bounds.max.z;
             minX = ground.bounds.min.x;
@@ -75,9 +75,9 @@ namespace Outscal.BattleTank3D
             switch (initialState)
             {
 
-                // case EnemyStatesEnum.Attacking:
-                //     currentState = attackingState;
-                //     break;
+                case EnemyStatesEnum.Attacking:
+                    currentState = attackingState;
+                    break;
 
                 case EnemyStatesEnum.Chasing:
                     currentState = chasingState;

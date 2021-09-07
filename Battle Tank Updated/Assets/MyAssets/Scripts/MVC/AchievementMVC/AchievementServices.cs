@@ -9,9 +9,10 @@ namespace Outscal.BattleTank3D
 {
     public class AchievementServices : MonoSingletonGeneric<AchievementServices>
     {
-        public BulletsFiredAchievementSO bulletsFiredSO;
-        public EnemyKilledAchievementSO enemyKilledSO;
+        [SerializeField] private BulletsFiredAchievementSO bulletsFiredSO;
+        [SerializeField] private EnemyKilledAchievementSO enemyKilledSO;
         private AchievementController achievementController;
+        private AchievementModel achievementModel;
 
         void Start()
         {
@@ -20,7 +21,7 @@ namespace Outscal.BattleTank3D
 
         private void CreatAchievement()
         {
-            AchievementModel achievementModel = new AchievementModel(bulletsFiredSO, enemyKilledSO);
+            achievementModel = new AchievementModel(bulletsFiredSO, enemyKilledSO);
             achievementController = new AchievementController(achievementModel);
         }
 

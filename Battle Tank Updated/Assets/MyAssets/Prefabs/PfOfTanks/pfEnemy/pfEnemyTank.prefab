@@ -9875,7 +9875,7 @@ Rigidbody:
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 126
   m_CollisionDetection: 0
@@ -9927,7 +9927,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   TankDestroyVFX: {fileID: 6067597034075719517}
-  enemyNavMesh: {fileID: 0}
+  enemyNavMesh: {fileID: 2565697357936086369}
+  ground: {fileID: 480680654253685594, guid: 4070440cf14fda34aa994223e5d75010, type: 3}
   maxX: 0
   maxZ: 0
   minX: 0

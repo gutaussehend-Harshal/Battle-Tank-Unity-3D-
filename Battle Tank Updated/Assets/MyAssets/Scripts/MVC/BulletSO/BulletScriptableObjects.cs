@@ -11,7 +11,6 @@ namespace Outscal.BattleTank3D
     public class BulletScriptableObjects : ScriptableObject
     {
         public BulletView bulletView;
-
         public BulletTypes bulletTypes;
         public float bulletForce;
         public float bulletDamage;

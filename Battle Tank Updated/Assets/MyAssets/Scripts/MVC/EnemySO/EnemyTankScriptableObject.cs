@@ -12,10 +12,8 @@ namespace Outscal.BattleTank3D
     {
         public EnemyView enemyView;
         public BoxCollider groundArea;
-
         public float fireRate;
         public BulletScriptableObjects bulletType;
-
         public float enemyHealth;
     }
 

@@ -19,6 +19,7 @@ namespace Outscal.BattleTank3D
             bulletView = GameObject.Instantiate<BulletView>(_bulletView, position, rotation);
             bulletView.SetBulletController(this);
             bulletModel.SetBulletController(this);
+            // bulletModel.SetBulletController(this);
             rigidbody = bulletView.GetComponent<Rigidbody>();
         }
 

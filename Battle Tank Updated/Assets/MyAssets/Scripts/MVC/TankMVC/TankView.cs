@@ -10,12 +10,12 @@ namespace Outscal.BattleTank3D
     public class TankView : MonoBehaviour
     {
         private TankController tankController;
-        private float movement, rotation;
+        private float movement;
+        private float rotation;
         private float canFire = 0f;
         public Transform BulletShootPoint;
-        // public GameObject tankDestroyVFX;
-        public MeshRenderer[] childs;
-        public ParticleSystem TankDestroyVFX;
+        [SerializeField] private MeshRenderer[] childs;
+        [SerializeField] private ParticleSystem TankDestroyVFX;
 
         public void SetTankController(TankController _tankController)
         {
@@ -30,6 +30,22 @@ namespace Outscal.BattleTank3D
 
         private void FixedUpdate()
         {
+            // if (movement != 0)
+            // {
+            //     tankController.MoveTank(movement, tankController.tankModel.movementSpeed);
+            //     // running audio
+            //     // SoundManager.Instance.PlayMusic(Sounds.PlayerMove);
+            // }
+            // else
+            // {
+            //     // idle audio
+            //     // SoundManager.Instance.PlayMusic(Sounds.PlayerIdle);
+            // }
+            // if (rotation != 0)
+            // {
+            //     tankController.RotateTank(rotation, tankController.tankModel.rotationSpeed);
+            // }
+
             tankController.MoveTank(movement, tankController.tankModel.movementSpeed);
             tankController.RotateTank(rotation, tankController.tankModel.rotationSpeed);
         }
@@ -42,8 +58,9 @@ namespace Outscal.BattleTank3D
 
         private void ShootBullet()
         {
-            if (Input.GetButtonDown("Fire1") && canFire < Time.time)
+            if (Input.GetMouseButtonDown(0) && canFire < Time.time)
             {
+                // SoundManager.Instance.PlayMusic(Sounds.Shoot);
                 canFire = tankController.tankModel.fireRate + Time.time;
                 tankController.ShootBullet();
             }

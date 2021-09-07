@@ -11,14 +11,10 @@ namespace Outscal.BattleTank3D
     public class TankScriptableObjects : ScriptableObject
     {
         public TankType tankType;
-
         public TankView tankView;
-
         public float movementSpeed;
         public float rotationSpeed;
-
         public float health;
-
         public float fireRate;
         public BulletScriptableObjects bulletType;
     }

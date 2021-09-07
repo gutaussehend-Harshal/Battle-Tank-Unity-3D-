@@ -18,14 +18,15 @@ namespace Outscal.BattleTank3D
             enemyView = GameObject.Instantiate<EnemyView>(_enemyView, pos, Quaternion.identity);
             enemyView.SetEnemyTankController(this);
             enemyModel.SetEnemyTankController(this);
+            // enemyModel.SetEnemyTankController(this);
         }
 
         public Vector3 GetRandomPosition()
         {
             float x = Random.Range(enemyView.minX, enemyView.maxX);
             float z = Random.Range(enemyView.minZ, enemyView.maxZ);
-            Vector3 randDir = new Vector3(x, 0, z);
-            return randDir;
+            Vector3 randomDir = new Vector3(x, 0, z);
+            return randomDir;
         }
 
         private void SetPatrolingDestination()
@@ -53,15 +54,15 @@ namespace Outscal.BattleTank3D
                 {
                     enemyView.currentState.ChangeState(enemyView.chasingState);
                 }
-                else
-                {
-                    enemyView.currentState.ChangeState(enemyView.patrollingState);
-                }
+                // else
+                // {
+                //     enemyView.currentState.ChangeState(enemyView.patrollingState);
+                // }
             }
-            else
-            {
+            // else
+            // {
                 enemyView.currentState.ChangeState(enemyView.patrollingState);
-            }
+            // }
         }
 
         public void ChaseToPlayer()
@@ -71,7 +72,7 @@ namespace Outscal.BattleTank3D
             ShootBullet();
         }
 
-        private void ShootBullet()
+        public void ShootBullet()
         {
             if (enemyView.canFire < Time.time)
             {
@@ -87,7 +88,7 @@ namespace Outscal.BattleTank3D
 
         public void DeadEnemy()
         {
-            EventService.GetInstance().InvokeEnemyKilledEvent();
+            EventService.GetInstance().InvokeOnEnemyKilledEvent();
             EnemyService.GetInstance().DestroyEnemyTank(this);
         }
 
@@ -100,6 +101,7 @@ namespace Outscal.BattleTank3D
             {
                 Debug.Log("Dead called");
                 DeadEnemy();
+                // SoundManager.Instance.PlayMusic(Sounds.EnemyDeath);
             }
         }
 

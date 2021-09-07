@@ -25,5 +25,9 @@ namespace Outscal.BattleTank3D
         {
             bulletController = _bulletController;
         }
+        // public void SetBulletController(BulletController _bulletController)
+        // {
+        //     bulletController = _bulletController;
+        // }
     }
 }

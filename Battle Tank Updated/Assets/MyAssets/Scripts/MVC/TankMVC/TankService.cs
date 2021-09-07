@@ -9,12 +9,12 @@ namespace Outscal.BattleTank3D
 {
     public class TankService : MonoSingletonGeneric<TankService>
     {
-        public TankScriptableObjectList tankListSO;
+        [SerializeField] private TankScriptableObjectList tankListSO;
         public TankScriptableObjects tankScriptableObjects { get; private set; }
         private TankModel currentTankmodel;
-        public GameObject destroyGround;
+        [SerializeField] private GameObject destroyGround;
         private List<TankController> tanks = new List<TankController>();
-        public Transform position;
+        private Transform position;
         public TankView tankView { get; private set; }
         private TankController tankController;
         private List<EnemyController> enemyControllers;
@@ -70,7 +70,7 @@ namespace Outscal.BattleTank3D
                     tanks.Remove(tank);
                 }
             }
-            UIManager.uiManagerInstance.DisplayLoseGamePanel();
+            // UIManager.uiManagerInstance.DisplayLoseGamePanel();
             // DestroyGround.instance.DestroyMilitary();
         }
 
@@ -86,7 +86,7 @@ namespace Outscal.BattleTank3D
                     enemyControllers[i].DeadEnemy();
                 }
             }
-            UIManager.uiManagerInstance.DisplayWinGamePanel();
+            // UIManager.uiManagerInstance.DisplayWinGamePanel();
         }
     }
 }

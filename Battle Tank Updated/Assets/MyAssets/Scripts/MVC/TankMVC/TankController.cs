@@ -12,14 +12,13 @@ namespace Outscal.BattleTank3D
         public TankModel tankModel { get; private set; }
         public TankView tankView { get; private set; }
         private Rigidbody rb;
-        
-        // private UIManager uiManager;
+
         public TankController(TankModel _tankModel, TankView _tankView)
         {
             PlayerPrefs.DeleteAll();
             tankModel = _tankModel;
             tankView = GameObject.Instantiate<TankView>(_tankView);
-            CameraController.instance.SetTarget(tankView.transform);
+            CameraController.cameraInstance.SetTarget(tankView.transform);
             rb = tankView.GetComponent<Rigidbody>();
             tankView.SetTankController(this);
             tankModel.SetTankController(this);
@@ -85,11 +84,16 @@ namespace Outscal.BattleTank3D
         {
             tankModel.health -= damage;
             // UIService.instance.UpdateHealthText(tankModel.health);
+            // UIManager.uiManagerInstance.UpdatePlayerHealthText(damage);
+            // UIManager.uiManagerInstance.RefreshUI();
             Debug.Log("Player Health : " + tankModel.health);
+            UIManager.uiManagerInstance.UpdateHealthText(tankModel.health);
+
             if (tankModel.health <= 0)
             {
                 Dead();
                 UIManager.uiManagerInstance.DisplayLoseGamePanel();
+                // SoundManager.Instance.PlayMusic(Sounds.PlayerDeath);
             }
         }
 
@@ -103,7 +107,7 @@ namespace Outscal.BattleTank3D
             // GameService.instance.CheckForHighScore();
             // SFXService.instance.PlaySoundAtTrack1(tankView.TankDestroySFX, 1f, 10, true);
             // VFXService.instance.InstantiateEffects(tankView.TankDestroyVFX, tankView.transform.position);
-            // UIService.instance.ResetScore();
+            UIManager.uiManagerInstance.ResetScore();
             tankModel.DestroyModel();
             tankView.DestroyView();
             tankModel = null;

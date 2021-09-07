@@ -9,7 +9,7 @@ namespace Outscal.BattleTank3D
 {
     public class CameraController : MonoBehaviour
     {
-        public Camera cam;
+        [SerializeField] private Camera cam;
         [SerializeField] private Transform target;
         [SerializeField] private float smoothSpeed = 0.005f;
         [SerializeField] private Vector3 offset = new Vector3(300, 300, 300);
@@ -17,11 +17,11 @@ namespace Outscal.BattleTank3D
         private Vector3 desiredposition;
         private Vector3 smoothPosition;
         private Transform playerLastPos;
-        public static CameraController instance;
+        public static CameraController cameraInstance;
 
         void Awake()
         {
-            instance = this;
+            cameraInstance = this;
         }
 
         public void SetTarget(Transform target)

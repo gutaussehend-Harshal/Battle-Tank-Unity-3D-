@@ -13,10 +13,6 @@ namespace Outscal.BattleTank3D
         public ParticleSystem BullectDestroyVFX;
         public GameObject audioSource;
         public float m_MaxLifeTime = 1f;
-        public void SetBulletController(BulletController _bulletController)
-        {
-            bulletController = _bulletController;
-        }
 
         void Start()
         {
@@ -30,16 +26,22 @@ namespace Outscal.BattleTank3D
             bulletController.Movement();
         }
 
+        public void SetBulletController(BulletController _bulletController)
+        {
+            bulletController = _bulletController;
+        }
         void OnCollisionEnter(Collision other)
         {
-            if ((bulletController.bulletModel.type == BulletTypes.EnemyBullet) && other.gameObject.GetComponent<TankView>() != null)
+            // if ((bulletController.bulletModel.type == BulletTypes.EnemyBullet) && other.gameObject.GetComponent<TankView>() != null)
+            if (other.gameObject.GetComponent<TankView>() != null)
             {
                 TankService.GetInstance().GetTankController().ApplyDamage(bulletController.bulletModel.damage);
             }
-            else if ((bulletController.bulletModel.type != BulletTypes.EnemyBullet) && other.gameObject.GetComponent<EnemyView>() != null)
+            // else if ((bulletController.bulletModel.type != BulletTypes.Yellow) && other.gameObject.GetComponent<EnemyView>() != null)
+            else if (other.gameObject.GetComponent<EnemyView>() != null)
             {
-
                 other.gameObject.GetComponent<EnemyView>().enemyController.ApplyDamage(bulletController.bulletModel.damage);
+                // EnemyService.GetInstance().GetEnemyTankController().ApplyDamage(bulletController.bulletModel.damage);
             }
             DestroyBullets();
         }

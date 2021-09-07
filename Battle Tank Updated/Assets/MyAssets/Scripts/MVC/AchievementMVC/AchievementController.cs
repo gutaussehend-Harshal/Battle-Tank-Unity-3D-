@@ -15,7 +15,7 @@ namespace Outscal.BattleTank3D
 
         public AchievementController(AchievementModel achivementModel)
         {
-            currentStageOfBulletFiredAchievement = 0;//PlayerPrefs.GetInt("BulletFireAchievement", 0);
+            currentStageOfBulletFiredAchievement = 0;                       //PlayerPrefs.GetInt("BulletFireAchievement", 0);
             currentStageOfEnemyKilledAchievement = 0;
             this.achivementModel = achivementModel;
         }
@@ -24,10 +24,10 @@ namespace Outscal.BattleTank3D
         {
             for (int i = 0; i < achivementModel.bulletsFiredAchievementSO.setps.Length; i++)
             {
-                if (i != currentStageOfBulletFiredAchievement)
-                {
-                    continue;
-                }
+                // if (i != currentStageOfBulletFiredAchievement)
+                // {
+                //     continue;
+                // }
                 if (TankService.GetInstance().GetCurrentTankModel().bulletFired == achivementModel.bulletsFiredAchievementSO.setps[i].requirement)
                 {
                     string achievement = achivementModel.bulletsFiredAchievementSO.setps[i].bulletAchievementType.ToString();
@@ -35,7 +35,7 @@ namespace Outscal.BattleTank3D
                     currentStageOfBulletFiredAchievement = i + 1;
                     // PlayerPrefs.SetInt("BulletFireAchievement", currentStageOfBulletFiredAchievement);
                 }
-                break;
+                // break;
             }
         }
 
@@ -43,10 +43,10 @@ namespace Outscal.BattleTank3D
         {
             for (int i = 0; i < achivementModel.enemyKilledAchievementSO.steps.Length; i++)
             {
-                if (i != currentStageOfEnemyKilledAchievement)
-                {
-                    continue;
-                }
+                // if (i != currentStageOfEnemyKilledAchievement)
+                // {
+                //     continue;
+                // }
                 if (TankService.GetInstance().GetCurrentTankModel().enemyKilled == achivementModel.enemyKilledAchievementSO.steps[i].requirement)
                 {
                     string achievement = (achivementModel.enemyKilledAchievementSO.steps[i].EnemyKilledAchievementType).ToString();
@@ -58,7 +58,7 @@ namespace Outscal.BattleTank3D
                 // {
                 //     UIManager.uiManagerInstance.DisplayLoseGamePanel();
                 // }
-                break;
+                // break;
             }
         }
 
