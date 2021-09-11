@@ -21,11 +21,9 @@ namespace Outscal.BattleTank3D
         public Transform BulletShootPoint;
         public Transform playerTransform;
         [SerializeField] private MeshRenderer[] childs;
-
         public EnemyPatrollingState patrollingState;
         public EnemyChasingState chasingState;
         public EnemyAttackingState attackingState;
-
         public EnemyStatesEnum initialState;
         public EnemyStatesEnum activeState;
         public EnemyState currentState;
@@ -74,7 +72,6 @@ namespace Outscal.BattleTank3D
         {
             switch (initialState)
             {
-
                 case EnemyStatesEnum.Attacking:
                     currentState = attackingState;
                     break;
