@@ -1,0 +1,14 @@
+﻿/// <summary>
+/// This class handles bullet types.
+/// </summary>
+namespace Outscal.BattleTank3D
+{
+    public enum BulletTypes
+    {
+        None,
+        Yellow,   //speed  15
+        Blue, //speed  20
+        Green,    //speed 25
+        EnemyBullet
+    }
+}
